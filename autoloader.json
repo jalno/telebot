@@ -1,0 +1,610 @@
+{
+    "files": [
+        {
+            "file": "Types/InlineQueryResultAudio.php",
+            "classes": [
+                "InlineQueryResultAudio"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultPhoto.php",
+            "classes": [
+                "InlineQueryResultPhoto"
+            ]
+        },
+        {
+            "file": "Types/Sticker.php",
+            "classes": [
+                "Sticker"
+            ]
+        },
+        {
+            "file": "Types/InlineKeyboardButton.php",
+            "classes": [
+                "InlineKeyboardButton"
+            ]
+        },
+        {
+            "file": "Types/ReplyKeyboardRemove.php",
+            "classes": [
+                "ReplyKeyboardRemove"
+            ]
+        },
+        {
+            "file": "Types/Audio.php",
+            "classes": [
+                "Audio"
+            ]
+        },
+        {
+            "file": "Types/CallbackQuery.php",
+            "classes": [
+                "CallbackQuery"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedVoice.php",
+            "classes": [
+                "InlineQueryResultCachedVoice"
+            ]
+        },
+        {
+            "file": "Types/InlineQuery.php",
+            "classes": [
+                "InlineQuery"
+            ]
+        },
+        {
+            "file": "Types/ChosenInlineResult.php",
+            "classes": [
+                "CallbackQuery"
+            ]
+        },
+        {
+            "file": "Types/File.php",
+            "classes": [
+                "File"
+            ]
+        },
+        {
+            "file": "Types/Update.php",
+            "classes": [
+                "Update"
+            ]
+        },
+        {
+            "file": "Types/Location.php",
+            "classes": [
+                "Location"
+            ]
+        },
+        {
+            "file": "Types/ChatMember.php",
+            "classes": [
+                "ChatMember"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedGif.php",
+            "classes": [
+                "InlineQueryResultCachedGif"
+            ]
+        },
+        {
+            "file": "Types/ForceReply.php",
+            "classes": [
+                "ForceReply"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultVoice.php",
+            "classes": [
+                "InlineQueryResultVoice"
+            ]
+        },
+        {
+            "file": "Types/Video.php",
+            "classes": [
+                "Video"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultArticle.php",
+            "classes": [
+                "InlineQueryResultArticle"
+            ]
+        },
+        {
+            "file": "Types/InputMedia.php",
+            "classes": [
+                "pakckages\\telebot\\InputMedia"
+            ]
+        },
+        {
+            "file": "Types/MessageEntity.php",
+            "classes": [
+                "MessageEntity"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedMpeg4Gif.php",
+            "classes": [
+                "InlineQueryResultCachedMpeg4Gif"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedPhoto.php",
+            "classes": [
+                "InlineQueryResultCachedPhoto"
+            ]
+        },
+        {
+            "file": "Types/User.php",
+            "classes": [
+                "User"
+            ]
+        },
+        {
+            "file": "Types/PhotoSize.php",
+            "classes": [
+                "PhotoSize"
+            ]
+        },
+        {
+            "file": "Types/InputTextMessageContent.php",
+            "classes": [
+                "InputTextMessageContent"
+            ]
+        },
+        {
+            "file": "Types/ReplyKeyboardHide.php",
+            "classes": [
+                "ReplyKeyboardHide"
+            ]
+        },
+        {
+            "file": "Types/InputMediaPhoto.php",
+            "classes": [
+                "InputMediaPhoto"
+            ]
+        },
+        {
+            "file": "Types/Document.php",
+            "classes": [
+                "Document"
+            ]
+        },
+        {
+            "file": "Types/UserProfilePhotos.php",
+            "classes": [
+                "UserProfilePhotos"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResult.php",
+            "classes": [
+                "InlineQueryResult"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultContact.php",
+            "classes": [
+                "InlineQueryResultContact"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedDocument.php",
+            "classes": [
+                "InlineQueryResultCachedDocument"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultLocation.php",
+            "classes": [
+                "InlineQueryResultDocument"
+            ]
+        },
+        {
+            "file": "Types/InputMessageContent.php",
+            "classes": [
+                "InputMessageContent"
+            ]
+        },
+        {
+            "file": "Types/InlineKeyboardMarkup.php",
+            "classes": [
+                "InlineKeyboardMarkup"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultVideo.php",
+            "classes": [
+                "InlineQueryResultVideo"
+            ]
+        },
+        {
+            "file": "Types/Chat.php",
+            "classes": [
+                "Chat"
+            ]
+        },
+        {
+            "file": "Types/ChatPhoto.php",
+            "classes": [
+                "ChatPhoto"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultDocument.php",
+            "classes": [
+                "InlineQueryResultDocument"
+            ]
+        },
+        {
+            "file": "Types/ReplyKeyboardMarkup.php",
+            "classes": [
+                "ReplyKeyboardMarkup"
+            ]
+        },
+        {
+            "file": "Types/InputContactMessageContent.php",
+            "classes": [
+                "InputContactMessageContent"
+            ]
+        },
+        {
+            "file": "Types/InputLocationMessageContent.php",
+            "classes": [
+                "InputLocationMessageContent"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultMpeg4Gif.php",
+            "classes": [
+                "InlineQueryResultMpeg4Gif"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultVenue.php",
+            "classes": [
+                "InlineQueryResultDocument"
+            ]
+        },
+        {
+            "file": "Types/Venue.php",
+            "classes": [
+                "Venue"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedAudio.php",
+            "classes": [
+                "InlineQueryResultCachedAudio"
+            ]
+        },
+        {
+            "file": "Types/KeyboardButton.php",
+            "classes": [
+                "KeyboardButton"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedSticker.php",
+            "classes": [
+                "InlineQueryResultCachedSticker"
+            ]
+        },
+        {
+            "file": "Types/Voice.php",
+            "classes": [
+                "Voice"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultGif.php",
+            "classes": [
+                "InlineQueryResultGif"
+            ]
+        },
+        {
+            "file": "Types/InputVenueMessageContent.php",
+            "classes": [
+                "InputVenueMessageContent"
+            ]
+        },
+        {
+            "file": "Types/Message.php",
+            "classes": [
+                "Message"
+            ]
+        },
+        {
+            "file": "Types/InlineQueryResultCachedVideo.php",
+            "classes": [
+                "InlineQueryResultCachedVideo"
+            ]
+        },
+        {
+            "file": "Types/InputMediaVideo.php",
+            "classes": [
+                "InputMediaVideo"
+            ]
+        },
+        {
+            "file": "Types/Contact.php",
+            "classes": [
+                "Contact"
+            ]
+        },
+        {
+            "file": "Methods/GetChatMembersCount.php",
+            "classes": [
+                "GetChatMembersCount"
+            ]
+        },
+        {
+            "file": "Methods/EditMessageCaption.php",
+            "classes": [
+                "EditMessageCaption"
+            ]
+        },
+        {
+            "file": "Methods/SendVideoNote.php",
+            "classes": [
+                "SendVideoNote"
+            ]
+        },
+        {
+            "file": "Methods/ForwardMessage.php",
+            "classes": [
+                "ForwardMessage"
+            ]
+        },
+        {
+            "file": "Methods/SendAudio.php",
+            "classes": [
+                "SendAudio"
+            ]
+        },
+        {
+            "file": "Methods/AnswerCallbackQuery.php",
+            "classes": [
+                "AnswerCallbackQuery"
+            ]
+        },
+        {
+            "file": "Methods/GetUpdates.php",
+            "classes": [
+                "GetUpdates"
+            ]
+        },
+        {
+            "file": "Methods/StopMessageLiveLocation.php",
+            "classes": [
+                "StopMessageLiveLocation"
+            ]
+        },
+        {
+            "file": "Methods/GetFile.php",
+            "classes": [
+                "GetFile"
+            ]
+        },
+        {
+            "file": "Methods/SendSticker.php",
+            "classes": [
+                "SendSticker"
+            ]
+        },
+        {
+            "file": "Methods/SetChatPhoto.php",
+            "classes": [
+                "SetChatPhoto"
+            ]
+        },
+        {
+            "file": "Methods/GetChatAdministrators.php",
+            "classes": [
+                "GetChatAdministrators"
+            ]
+        },
+        {
+            "file": "Methods/DeleteMessage.php",
+            "classes": [
+                "DeleteMessage"
+            ]
+        },
+        {
+            "file": "Methods/RestrictChatMember.php",
+            "classes": [
+                "RestrictChatMember"
+            ]
+        },
+        {
+            "file": "Methods/GetUserProfilePhotos.php",
+            "classes": [
+                "GetUserProfilePhotos"
+            ]
+        },
+        {
+            "file": "Methods/SendVideo.php",
+            "classes": [
+                "SendVideo"
+            ]
+        },
+        {
+            "file": "Methods/GetMe.php",
+            "classes": [
+                "GetMe"
+            ]
+        },
+        {
+            "file": "Methods/AnswerInlineQuery.php",
+            "classes": [
+                "AnswerInlineQuery"
+            ]
+        },
+        {
+            "file": "Methods/DeleteChatPhoto.php",
+            "classes": [
+                "SetChatPhoto"
+            ]
+        },
+        {
+            "file": "Methods/SendContact.php",
+            "classes": [
+                "SendContact"
+            ]
+        },
+        {
+            "file": "Methods/SendVoice.php",
+            "classes": [
+                "SendVoice"
+            ]
+        },
+        {
+            "file": "Methods/KickChatMember.php",
+            "classes": [
+                "KickChatMember"
+            ]
+        },
+        {
+            "file": "Methods/EditMessageLiveLocation.php",
+            "classes": [
+                "EditMessageLiveLocation"
+            ]
+        },
+        {
+            "file": "Methods/SendChatAction.php",
+            "classes": [
+                "SendChatAction"
+            ]
+        },
+        {
+            "file": "Methods/GetChat.php",
+            "classes": [
+                "GetChat"
+            ]
+        },
+        {
+            "file": "Methods/ExportChatInviteLink.php",
+            "classes": [
+                "ExportChatInviteLink"
+            ]
+        },
+        {
+            "file": "Methods/PromoteChatMember.php",
+            "classes": [
+                "PromoteChatMember"
+            ]
+        },
+        {
+            "file": "Methods/PinChatMessage.php",
+            "classes": [
+                "PinChatMessage"
+            ]
+        },
+        {
+            "file": "Methods/SendLocation.php",
+            "classes": [
+                "SendLocation"
+            ]
+        },
+        {
+            "file": "Methods/GetChatMember.php",
+            "classes": [
+                "GetChatMember"
+            ]
+        },
+        {
+            "file": "Methods/UnpinChatMessage.php",
+            "classes": [
+                "UnpinChatMessage"
+            ]
+        },
+        {
+            "file": "Methods/LeaveChat.php",
+            "classes": [
+                "LeaveChat"
+            ]
+        },
+        {
+            "file": "Methods/SetWebhook.php",
+            "classes": [
+                "SetWebhook"
+            ]
+        },
+        {
+            "file": "Methods/SendPhoto.php",
+            "classes": [
+                "SendPhoto"
+            ]
+        },
+        {
+            "file": "Methods/SetChatTitle.php",
+            "classes": [
+                "SetChatTitle"
+            ]
+        },
+        {
+            "file": "Methods/UnbanChatMember.php",
+            "classes": [
+                "UnbanChatMember"
+            ]
+        },
+        {
+            "file": "Methods/SendDocument.php",
+            "classes": [
+                "SendDocument"
+            ]
+        },
+        {
+            "file": "Methods/EditMessageReplyMarkup.php",
+            "classes": [
+                "EditMessageReplyMarkup"
+            ]
+        },
+        {
+            "file": "Methods/SendMessage.php",
+            "classes": [
+                "SendMessage"
+            ]
+        },
+        {
+            "file": "Methods/SetChatDescription.php",
+            "classes": [
+                "SetChatDescription"
+            ]
+        },
+        {
+            "file": "Methods/EditMessageText.php",
+            "classes": [
+                "EditMessageText"
+            ]
+        },
+        {
+            "file": "API.php",
+            "classes": [
+                "API"
+            ]
+        },
+        {
+            "file": "Method.php",
+            "classes": [
+                "Method"
+            ]
+        },
+        {
+            "file": "Type.php",
+            "classes": [
+                "Type"
+            ]
+        },
+        {
+            "file": "Processes/GetUpdates.php",
+            "classes": [
+                "Processes\\GetUpdates"
+            ]
+        }
+    ]
+}
