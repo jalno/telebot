@@ -1,6 +1,6 @@
 <?php
 namespace packages\telebot;
-use \packages\base\{http, json, cache, IO\file};
+use \packages\base\{http, json, cache, IO\file, events};
 class API {
 	protected $token;
 	protected $http;
@@ -52,6 +52,16 @@ class API {
 			throw new Exception($json->description, $json->error_code);
 		}
 		return $method->handleResponse($json->result);
+	}
+	public function handleWebhock() {
+		$data = file_get_contents("php://input");
+		$json = json\decode($data, false);
+		$this->handleJsonWebhock($json);
+	}
+	public function handleJsonWebhock($json) {
+		$update = Update::fromJson($json);
+		$update->setBot($this);
+		events::trigger($update);
 	}
 	public function getUpdate($offset = null, $limit = 100, $timeout = 0) {
 		if ($offset === null){
