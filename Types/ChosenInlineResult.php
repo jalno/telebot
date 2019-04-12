@@ -1,6 +1,7 @@
 <?php
 namespace packages\telebot;
-class CallbackQuery extends Type {
+
+class ChosenInlineResult extends Type {
 	/**
 	 * The unique identifier for the result that was chosen.
 	 * @var string
@@ -31,20 +32,20 @@ class CallbackQuery extends Type {
 	protected $inlineMessageId;
 
 	/**
-	 * The query that was used to obtain the result.
+	 * The data that was used to obtain the result.
 	 *
 	 * @var string
 	 */
-	protected $query;
+	protected $data;
 
 
-	public function __construct(string $resultId, User $from, string $query){
+	public function __construct(string $resultId, User $from, string $data){
 		$this->resultId = $resultId;
 		$this->from = $from;
-		$this->query = $query;
+		$this->data = $data;
 	}
 	public static function fromJson($data) {
-		$object = new static($data->id, User::fromJson($data->from), $data->query);
+		$object = new static($data->id, User::fromJson($data->from), $data->data);
 		if (isset($data->location)) {
 			$object->location = Location::fromJson($data->location);
 		}
@@ -57,7 +58,7 @@ class CallbackQuery extends Type {
 		$data = array(
 			'id' => $this->id,
 			'from' => $this->from->toJson(),
-			'query' => $this->query,
+			'data' => $this->data,
 		);
 		if ($this->inlineMessageId) {
 			$data['inline_message_id'] = $this->inlineMessageId;
@@ -146,21 +147,21 @@ class CallbackQuery extends Type {
 	}
 
 	/**
-	 * Get the query that was used to obtain the result.
+	 * Get the data that was used to obtain the result.
 	 *
 	 * @return  string
 	 */ 
 	public function getQuery(): string {
-		return $this->query;
+		return $this->data;
 	}
 
 	/**
-	 * Set the query that was used to obtain the result.
+	 * Set the data that was used to obtain the result.
 	 *
-	 * @param  string  $query  The query that was used to obtain the result.
+	 * @param  string  $data  The data that was used to obtain the result.
 	 * @return  void
 	 */ 
-	public function setQuery(string $query) {
-		$this->query = $query;
+	public function setQuery(string $data) {
+		$this->data = $data;
 	}
 }

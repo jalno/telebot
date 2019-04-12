@@ -57,7 +57,7 @@
         {
             "file": "Types/ChosenInlineResult.php",
             "classes": [
-                "CallbackQuery"
+                "ChosenInlineResult"
             ]
         },
         {
