@@ -1,5 +1,6 @@
 <?php
 namespace packages\telebot;
+use packages\base\IO\file;
 class SetWebhook extends Method {
 	/**
      * @var string 
