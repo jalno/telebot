@@ -99,7 +99,7 @@ class EditMessageReplyMarkup extends Method {
             'reply_markup' => is_null($this->replyMarkup) ? $this->replyMarkup : $this->replyMarkup->toJson(),
 		);
 	}
-	public function handleResponse(\stdObject $response) {
+	public function handleResponse($response) {
 		return Message::fromJson($response);
 	}
 

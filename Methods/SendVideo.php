@@ -214,7 +214,7 @@ class SendVideo extends Method {
             'disable_notification' => $this->disableNotification,
 		);
 	}
-	public function handleResponse(\stdObject $response) {
+	public function handleResponse($response) {
 		return Message::fromJson($response);
 	}
 }

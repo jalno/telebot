@@ -52,7 +52,7 @@ class SendChatAction extends Method {
             'action' => $this->action
 		);
 	}
-	public function handleResponse(bool $response) {
+	public function handleResponse($response) {
 		return $response;
 	}
 }
