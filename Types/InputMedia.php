@@ -1,6 +1,8 @@
 <?php
-namespace pakckages\telebot;
-use \packages\base\IO\file;
+namespace packages\telebot;
+
+use packages\base\IO\file;
+
 abstract class InputMedia extends Type {
 	/**
 	 * Type of the result, must be photo or video
