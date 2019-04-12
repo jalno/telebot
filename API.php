@@ -83,6 +83,13 @@ class API {
 		return $updates;
 	}
 	/**
+	 * Get the value of bot token
+	 * @return string
+	 */
+	public function getToken(): string {
+		return $this->token;
+	}
+	/**
      * @return string
      */
     protected function getURL()
