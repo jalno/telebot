@@ -14,7 +14,7 @@ class AnswerCallbackQuery extends Method {
      */
 	protected $showAlert = false;
 
-	public function __construnt($callbackQueryId, string $text) {
+	public function __construct($callbackQueryId, string $text) {
 		$this->callbackQueryId = $callbackQueryId;
 		$this->text = $text;
 	}

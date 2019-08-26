@@ -16,7 +16,7 @@ class SendChatAction extends Method {
      */
 	protected $action;
 	
-	public function __construnt($chatId, string $action) {
+	public function __construct($chatId, string $action) {
 		$this->chatId = $chatId;
 		$this->action = $action;
 	}

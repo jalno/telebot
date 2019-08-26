@@ -21,7 +21,7 @@ class StopMessageLiveLocation extends Method {
      */
 	protected $replyMarkup;
 
-	public function __construnt(int $chatId, int $messageId, int $inlineMessageId) {
+	public function __construct(int $chatId, int $messageId, int $inlineMessageId) {
 		$this->chatId = $chatId;
 		$this->messageId = $messageId;
 		$this->inlineMessageId = $inlineMessageId;

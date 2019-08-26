@@ -37,7 +37,7 @@ class SendVoice extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt($chatId, file $voice) {
+	public function __construct($chatId, file $voice) {
 		$this->chatId = $chatId;
 		$this->voice = $voice;
 	}

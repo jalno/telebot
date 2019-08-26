@@ -2,7 +2,7 @@
 namespace packages\telebot;
 class Video extends Type {
 	/**
-	 * @var int
+	 * @var string
 	 */
 	protected $fileId;
 
@@ -37,7 +37,7 @@ class Video extends Type {
 	protected $fileSize;
 
 
-	public function __construct(int $fileId, int $width, int $height, int $duration){
+	public function __construct(string $fileId, int $width, int $height, int $duration){
 		$this->fileId = $fileId;
 		$this->width = $width;
 		$this->height = $height;
@@ -72,19 +72,19 @@ class Video extends Type {
 	/**
 	 * Get the value of fileId
 	 *
-	 * @return  int
+	 * @return  string
 	 */ 
-	public function getFileId(): int {
+	public function getFileId(): string {
 		return $this->fileId;
 	}
 
 	/**
 	 * Set the value of fileId
 	 *
-	 * @param  int  $fileId
+	 * @param  string  $fileId
 	 * @return  void
 	 */ 
-	public function setFileId(int $fileId) {
+	public function setFileId(string $fileId) {
 		$this->fileId = $fileId;
 	}
 

@@ -12,7 +12,7 @@ class SetChatPhoto extends Method {
      */
 	protected $photo;
 
-	public function __construnt($chatId, file $photo) {
+	public function __construct($chatId, file $photo) {
 		$this->chatId = $chatId;
 		$this->photo = $photo;
 	}

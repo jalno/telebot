@@ -47,7 +47,7 @@ class SendVideo extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt($chatId, file $video) {
+	public function __construct($chatId, file $video) {
 		$this->chatId = $chatId;
 		$this->video = $video;
 	}

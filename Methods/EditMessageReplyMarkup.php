@@ -21,7 +21,7 @@ class EditMessageReplyMarkup extends Method {
      */
 	protected $inlineMessageId;
 
-	public function __construnt($chatId, int $messageId, $replyMarkup) {
+	public function __construct($chatId, int $messageId, $replyMarkup) {
 		$this->chatId = $chatId;
 		$this->messageId = $messageId;
 		$this->replyMarkup = $replyMarkup;

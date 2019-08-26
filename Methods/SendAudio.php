@@ -42,7 +42,7 @@ class SendAudio extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt($chatId, file $audio) {
+	public function __construct($chatId, file $audio) {
 		$this->chatId = $chatId;
 		$this->audio = $audio;
 	}

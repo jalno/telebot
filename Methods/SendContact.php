@@ -36,7 +36,7 @@ class SendContact extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt($chatId, string $phoneNumber, string $firstName) {
+	public function __construct($chatId, string $phoneNumber, string $firstName) {
 		$this->chatId = $chatId;
 		$this->phoneNumber = $phoneNumber;
 		$this->firstName = $firstName;

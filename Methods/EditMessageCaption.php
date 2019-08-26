@@ -26,7 +26,7 @@ class EditMessageCaption extends Method {
      */
 	protected $inlineMessageId;
 
-	public function __construnt($chatId, int $messageId, string $caption) {
+	public function __construct($chatId, int $messageId, string $caption) {
 		$this->chatId = $chatId;
 		$this->messageId = $messageId;
 		$this->caption = $caption;

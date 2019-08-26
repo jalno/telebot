@@ -51,7 +51,7 @@ class PromoteChatMember extends Method {
      */
 	protected $canPromoteMembers = true;
 
-	public function __construnt($chatId, int $userId) {
+	public function __construct($chatId, int $userId) {
 		$this->chatId = $chatId;
 		$this->userId = $userId;
 	}

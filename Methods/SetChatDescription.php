@@ -11,7 +11,7 @@ class SetChatDescription extends Method {
      */
 	protected $title;
 
-	public function __construnt($chatId, string $title) {
+	public function __construct($chatId, string $title) {
 		$this->chatId = $chatId;
 		$this->title = $title;
 	}

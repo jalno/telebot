@@ -27,7 +27,7 @@ class SendSticker extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt($chatId, $sticker) {
+	public function __construct($chatId, $sticker) {
 		$this->chatId = $chatId;
 		$this->sticker = $sticker;
 	}

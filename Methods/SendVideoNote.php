@@ -32,7 +32,7 @@ class SendVideoNote extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt($chatId, file $videoNote) {
+	public function __construct($chatId, file $videoNote) {
 		$this->chatId = $chatId;
 		$this->videoNote = $videoNote;
 	}

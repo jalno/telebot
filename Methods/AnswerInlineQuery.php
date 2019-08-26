@@ -37,7 +37,7 @@ class AnswerInlineQuery extends Method {
 	protected $switchPmText;
 
 
-	public function __construnt(int $inlineQueryId, array $results) {
+	public function __construct(int $inlineQueryId, array $results) {
 		$this->inlineQueryId = $inlineQueryId;
 		$this->results = $results;
 	}

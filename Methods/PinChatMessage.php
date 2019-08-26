@@ -16,7 +16,7 @@ class PinChatMessage extends Method {
      */
 	protected $disableNotification;
 
-	public function __construnt($chatId, int $messageId) {
+	public function __construct($chatId, int $messageId) {
 		$this->chatId = $chatId;
 		$this->messageId = $messageId;
 	}

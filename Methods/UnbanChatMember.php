@@ -11,7 +11,7 @@ class UnbanChatMember extends Method {
      */
 	protected $userId;
 
-	public function __construnt($chatId, int $userId) {
+	public function __construct($chatId, int $userId) {
 		$this->chatId = $chatId;
 		$this->userId = $userId;
 	}

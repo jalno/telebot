@@ -41,7 +41,7 @@ class EditMessageText extends Method {
      */
 	protected $inlineMessageId;
 
-	public function __construnt($chatId, int $messageId, string $text) {
+	public function __construct($chatId, int $messageId, string $text) {
 		$this->chatId = $chatId;
 		$this->messageId = $messageId;
 		$this->text = $text;

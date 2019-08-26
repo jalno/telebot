@@ -6,7 +6,7 @@ class UnpinChatMessage extends Method {
      */
 	protected $chatId;
 
-	public function __construnt($chatId) {
+	public function __construct($chatId) {
 		$this->chatId = $chatId;
 	}
 	/**

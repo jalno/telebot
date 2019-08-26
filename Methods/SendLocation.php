@@ -36,7 +36,7 @@ class SendLocation extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt(int $chatId, float $latitude, float $longitude) {
+	public function __construct(int $chatId, float $latitude, float $longitude) {
 		$this->chatId = $chatId;
 		$this->latitude = $latitude;
 		$this->longitude = $longitude;

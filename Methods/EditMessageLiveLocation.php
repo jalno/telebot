@@ -31,7 +31,7 @@ class EditMessageLiveLocation extends Method {
      */
 	protected $replyMarkup;
 
-	public function __construnt(int $chatId, int $messageId, int $inlineMessageId, float $latitude, float $longitude) {
+	public function __construct(int $chatId, int $messageId, int $inlineMessageId, float $latitude, float $longitude) {
 		$this->chatId = $chatId;
 		$this->messageId = $messageId;
 		$this->inlineMessageId = $inlineMessageId;

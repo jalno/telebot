@@ -22,7 +22,7 @@ class ForwardMessage extends Method {
      */
 	protected $disableNotification = false;
 
-	public function __construnt($chatId, int $fromChatId, int $messageId) {
+	public function __construct($chatId, int $fromChatId, int $messageId) {
 		$this->chatId = $chatId;
 		$this->fromChatId = $fromChatId;
 		$this->messageId = $messageId;

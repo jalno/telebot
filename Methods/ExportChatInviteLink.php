@@ -6,7 +6,7 @@ class ExportChatInviteLink extends Method {
      */
 	protected $chatId;
 
-	public function __construnt($chatId, int $userId) {
+	public function __construct($chatId, int $userId) {
 		$this->chatId = $chatId;
 	}
 	/**

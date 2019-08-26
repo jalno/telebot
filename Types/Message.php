@@ -288,7 +288,7 @@ class Message extends Type {
 			$object->document = Document::fromJson($data->document);
 		}
 		if (isset($data->photo)) {
-			$object->photo = Photo::fromJson($data->photo);
+			$object->photo = array_map([PhotoSize::class, 'fromJson'], $data->photo);
 		}
 		if (isset($data->sticker)) {
 			$object->sticker = Sticker::fromJson($data->sticker);

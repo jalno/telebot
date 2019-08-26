@@ -22,7 +22,7 @@ class KickChatMember extends Method {
      *                 If user is banned for more than 366 days or less than 30 seconds from the current time
      *                 they are considered to be banned forever
 	 */
-	public function __construnt($chatId, int $userId) {
+	public function __construct($chatId, int $userId) {
 		$this->chatId = $chatId;
 		$this->userId = $userId;
 	}

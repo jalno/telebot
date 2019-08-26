@@ -6,7 +6,7 @@ class GetFile extends Method {
      */
 	protected $fileId;
 
-	public function __construnt(int $fileId) {
+	public function __construct(int $fileId) {
 		$this->fileId = $fileId;
 	}
 	
