@@ -219,19 +219,19 @@ class InlineKeyboardButton extends Type {
 	/**
 	 * Get specify True, to send a Pay button.
 	 *
-	 * @return  boolean
+	 * @return bool
 	 */ 
-	public function getPay(): boolean {
+	public function getPay(): bool {
 		return $this->pay;
 	}
 
 	/**
 	 * Set specify True, to send a Pay button.
 	 *
-	 * @param  boolean  $pay  Specify True, to send a Pay button.
-	 * @return  void
+	 * @param  bool  $pay  Specify True, to send a Pay button.
+	 * @return void
 	 */ 
-	public function setPay(boolean $pay) {
+	public function setPay(bool $pay) {
 		$this->pay = $pay;
 	}
 }
