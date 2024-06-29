@@ -1,150 +1,175 @@
 <?php
+
 namespace packages\telebot;
-class SendContact extends Method {
-	/**
+
+class SendContact extends Method
+{
+    /**
      * @var int|string
      */
-	protected $chatId;
+    protected $chatId;
 
-	/**
-	 * @var string
+    /**
+     * @var string
      */
-	protected $phoneNumber;
-	
-	/**
-	 * @var string
-     */
-	protected $firstName;
-	
-	/**
-	 * @var string|null
-     */
-	protected $lastName;
+    protected $phoneNumber;
 
-	/**
-	 * @var int|null
+    /**
+     * @var string
      */
-	protected $replyToMessageId;
+    protected $firstName;
 
-	/**
-	 * @var InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
+    /**
+     * @var string|null
      */
-	protected $replyMarkup;
+    protected $lastName;
 
-	/**
-	 * @var bool
+    /**
+     * @var int|null
      */
-	protected $disableNotification = false;
+    protected $replyToMessageId;
 
-	public function __construct($chatId, string $phoneNumber, string $firstName) {
-		$this->chatId = $chatId;
-		$this->phoneNumber = $phoneNumber;
-		$this->firstName = $firstName;
-	}
-	/**
+    /**
+     * @var InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
+     */
+    protected $replyMarkup;
+
+    /**
+     * @var bool
+     */
+    protected $disableNotification = false;
+
+    public function __construct($chatId, string $phoneNumber, string $firstName)
+    {
+        $this->chatId = $chatId;
+        $this->phoneNumber = $phoneNumber;
+        $this->firstName = $firstName;
+    }
+
+    /**
      * @param int|string $chatId
+     *
      * @return void
      */
-	public function setChatID($chatId) {
-		$this->chatId = $chatId;
-	}
-	/**
+    public function setChatID($chatId)
+    {
+        $this->chatId = $chatId;
+    }
+
+    /**
      * @return int|string
      */
-	public function getChatID() {
-		return $this->chatId;
-	}
-	/**
-     * @param string $phoneNumber
+    public function getChatID()
+    {
+        return $this->chatId;
+    }
+
+    /**
      * @return void
      */
-	public function setPhoneNumber(string $phoneNumber) {
-		$this->phoneNumber = $phoneNumber;
-	}
-	/**
-     * @return string
-     */
-	public function getPhoneNumber():string {
-		return $this->phoneNumber;
-	}
-	/**
-     * @param string $firstName
+    public function setPhoneNumber(string $phoneNumber)
+    {
+        $this->phoneNumber = $phoneNumber;
+    }
+
+    public function getPhoneNumber(): string
+    {
+        return $this->phoneNumber;
+    }
+
+    /**
      * @return void
      */
-	public function setFirstName(string $firstName) {
-		$this->firstName = $firstName;
-	}
-	/**
-     * @return string
-     */
-	public function getFirstName():string {
-		return $this->firstName;
-	}
-	/**
-     * @param string|null $lastname
+    public function setFirstName(string $firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    public function getFirstName(): string
+    {
+        return $this->firstName;
+    }
+
+    /**
      * @return void
      */
-	public function setLastname($lastName) {
-		$this->lastName = $lastName;
-	}
-	/**
+    public function setLastname($lastName)
+    {
+        $this->lastName = $lastName;
+    }
+
+    /**
      * @return string|null
      */
-	public function getLastname() {
-		return $this->lastName;
-	}
-	/**
-	 * @param int|null $replyToMessageId
+    public function getLastname()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param int|null $replyToMessageId
+     *
      * @return void
      */
-	public function setReplyToMessageId($replyToMessageId) {
-		$this->replyToMessageId = $replyToMessageId;
-	}
-	/**
+    public function setReplyToMessageId($replyToMessageId)
+    {
+        $this->replyToMessageId = $replyToMessageId;
+    }
+
+    /**
      * @return int|null
      */
-	public function getReplyToMessageId() {
-		return $this->replyToMessageId;
-	}
-	/**
-	 * @param InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null $replyMarkup
+    public function getReplyToMessageId()
+    {
+        return $this->replyToMessageId;
+    }
+
+    /**
+     * @param InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null $replyMarkup
+     *
      * @return void
      */
-	public function setReplyMarkup($replyMarkup) {
-		$this->replyMarkup = $replyMarkup;
-	}
-	/**
+    public function setReplyMarkup($replyMarkup)
+    {
+        $this->replyMarkup = $replyMarkup;
+    }
+
+    /**
      * @return InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
      */
-	public function getReplyMarkup() {
-		return $this->replyMarkup;
-	}
+    public function getReplyMarkup()
+    {
+        return $this->replyMarkup;
+    }
 
-	/**
-	 * @param bool $disableNotification
+    /**
      * @return void
      */
-	public function setDisableNotification(bool $disableNotification) {
-		$this->disableNotification = $disableNotification;
-	}
-	/**
-     * @return bool
-     */
-	public function getDisableNotification():bool {
-		return $this->disableNotification;
-	}
-	public function toJson(): array {
-		return array(
-			'chat_id' => $this->chatId,
+    public function setDisableNotification(bool $disableNotification)
+    {
+        $this->disableNotification = $disableNotification;
+    }
+
+    public function getDisableNotification(): bool
+    {
+        return $this->disableNotification;
+    }
+
+    public function toJson(): array
+    {
+        return [
+            'chat_id' => $this->chatId,
             'phone_number' => $this->phoneNumber,
             'first_name' => $this->firstName,
             'last_name' => $this->lastName,
             'reply_to_message_id' => $this->replyToMessageId,
             'reply_markup' => is_null($this->replyMarkup) ? $this->replyMarkup : $this->replyMarkup->toJson(),
             'disable_notification' => $this->disableNotification,
-		);
-	}
-	public function handleResponse($response) {
-		return Message::fromJson($response);
-	}
+        ];
+    }
+
+    public function handleResponse($response)
+    {
+        return Message::fromJson($response);
+    }
 }

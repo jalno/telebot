@@ -1,126 +1,143 @@
 <?php
+
 namespace packages\telebot;
-class EditMessageCaption extends Method {
-	/**
+
+class EditMessageCaption extends Method
+{
+    /**
      * @var int|string
      */
-	protected $chatId;
+    protected $chatId;
 
-	/**
-	 * @var int
+    /**
+     * @var int
      */
-	protected $messageId;
+    protected $messageId;
 
-	/**
-	 * @var string
+    /**
+     * @var string
      */
-	protected $caption;
+    protected $caption;
 
-	/**
-	 * @var InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
+    /**
+     * @var InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
      */
-	protected $replyMarkup;
+    protected $replyMarkup;
 
-	/**
-	 * @var int|null
+    /**
+     * @var int|null
      */
-	protected $inlineMessageId;
+    protected $inlineMessageId;
 
-	public function __construct($chatId, int $messageId, string $caption) {
-		$this->chatId = $chatId;
-		$this->messageId = $messageId;
-		$this->caption = $caption;
-	}
-	/**
+    public function __construct($chatId, int $messageId, string $caption)
+    {
+        $this->chatId = $chatId;
+        $this->messageId = $messageId;
+        $this->caption = $caption;
+    }
+
+    /**
      * @param int|string $chatId
+     *
      * @return void
      */
-	public function setChatID($chatId) {
-		$this->chatId = $chatId;
-	}
-	/**
+    public function setChatID($chatId)
+    {
+        $this->chatId = $chatId;
+    }
+
+    /**
      * @return int|string
      */
-	public function getChatID() {
-		return $this->chatId;
-	}
+    public function getChatID()
+    {
+        return $this->chatId;
+    }
 
-	/**
-	 * Get the value of messageId
-	 *
-	 * @return  int
-	 */ 
-	public function getMessageId(): int {
-		return $this->messageId;
-	}
+    /**
+     * Get the value of messageId.
+     */
+    public function getMessageId(): int
+    {
+        return $this->messageId;
+    }
 
-	/**
-	 * Set the value of messageId
-	 *
-	 * @param  int  $messageId
-	 * @return  void
-	 */ 
-	public function setMessageId(int $messageId) {
-		$this->messageId = $messageId;
-	}
-
-	/**
-     * @param string $caption
+    /**
+     * Set the value of messageId.
+     *
      * @return void
      */
-	public function setCaption(string $caption) {
-		$this->caption = $caption;
-	}
-	/**
-     * @return string
-     */
-	public function getCaption():string {
-		return $this->caption;
-	}
-	
-	/**
-	 * @param InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null $replyMarkup
+    public function setMessageId(int $messageId)
+    {
+        $this->messageId = $messageId;
+    }
+
+    /**
      * @return void
      */
-	public function setReplyMarkup($replyMarkup) {
-		$this->replyMarkup = $replyMarkup;
-	}
-	/**
+    public function setCaption(string $caption)
+    {
+        $this->caption = $caption;
+    }
+
+    public function getCaption(): string
+    {
+        return $this->caption;
+    }
+
+    /**
+     * @param InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null $replyMarkup
+     *
+     * @return void
+     */
+    public function setReplyMarkup($replyMarkup)
+    {
+        $this->replyMarkup = $replyMarkup;
+    }
+
+    /**
      * @return InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
      */
-	public function getReplyMarkup() {
-		return $this->replyMarkup;
-	}
+    public function getReplyMarkup()
+    {
+        return $this->replyMarkup;
+    }
 
-	/**
-	 * Get the value of inlineMessageId
-	 *
-	 * @return  int|null
-	 */ 
-	public function getInlineMessageId() {
-		return $this->inlineMessageId;
-	}
+    /**
+     * Get the value of inlineMessageId.
+     *
+     * @return int|null
+     */
+    public function getInlineMessageId()
+    {
+        return $this->inlineMessageId;
+    }
 
-	/**
-	 * Set the value of inlineMessageId
-	 *
-	 * @param  int|null  $inlineMessageId
-	 * @return  void
-	 */ 
-	public function setInlineMessageId($inlineMessageId) {
-		$this->inlineMessageId = $inlineMessageId;
-	}
-	public function toJson(): array {
-		return array(
-			'chat_id' => $this->chatId,
-			'message_id' => $this->messageId,
+    /**
+     * Set the value of inlineMessageId.
+     *
+     * @param int|null $inlineMessageId
+     *
+     * @return void
+     */
+    public function setInlineMessageId($inlineMessageId)
+    {
+        $this->inlineMessageId = $inlineMessageId;
+    }
+
+    public function toJson(): array
+    {
+        return [
+            'chat_id' => $this->chatId,
+            'message_id' => $this->messageId,
             'caption' => $this->caption,
             'inline_message_id' => $this->inlineMessageId,
             'reply_markup' => is_null($this->replyMarkup) ? $this->replyMarkup : $this->replyMarkup->toJson(),
-		);
-	}
-	public function handleResponse($response) {
-		return Message::fromJson($response);
-	}
+        ];
+    }
 
+    public function handleResponse($response)
+    {
+        return Message::fromJson($response);
+    }
 }

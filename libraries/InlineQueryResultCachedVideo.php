@@ -1,148 +1,166 @@
 <?php
+
 namespace packages\telebot;
-class InlineQueryResultCachedVideo extends InlineQueryResult {
-	/**
-     * A valid file identifier for the video file
+
+class InlineQueryResultCachedVideo extends InlineQueryResult
+{
+    /**
+     * A valid file identifier for the video file.
      *
      * @var string
      */
-	protected $fileId;
+    protected $fileId;
 
     /**
-	 * Short description of the result
-	 * 
+     * Short description of the result.
+     *
      * @var string|null
      */
-	protected $description;
+    protected $description;
 
     /**
-	 * Caption of the photo to be sent, 0-200 characters
-	 * 
+     * Caption of the photo to be sent, 0-200 characters.
+     *
      * @var string|null
      */
-	protected $caption;
+    protected $caption;
 
     /**
-	 * Send Markdown or HTML, if you want Telegram apps to show bold, italic,
-	 * fixed-width text or inline URLs in the media caption.
-	 * 
+     * Send Markdown or HTML, if you want Telegram apps to show bold, italic,
+     * fixed-width text or inline URLs in the media caption.
+     *
      * @var string|null
      */
-	protected $parseMode;
-	
-	
-	public function __construct(string $id, string $title, string $fileId){
-		parent::__construct('video', $id, $title);
-		$this->fileId = $fileId;
-	}
-	
-	public static function fromJson($data) {
-		$object = new self($data->id, $data->title, $data->video_file_id);
-		if (isset($data->description)) {
-			$object->description = $data->description;
-		}
-		if (isset($data->caption)) {
-			$object->caption = $data->caption;
-		}
-		if (isset($data->parse_mode)) {
-			$object->parseMode = $data->parse_mode;
-		}
-		if (isset($data->reply_markup)) {
-			$object->replyMarkup = InlineKeyboardMarkup::fromJson($data->reply_markup);
-		}
-		if (isset($data->input_message_content)) {
-			$object->inputMessageContent = InputMessageContent::fromJson($data->input_message_content);
-		}
-		return $object;
-	}
-	public function toJson() {
-		$data = parent::toJson();
-		$data['video_file_id'] = $this->fileId;
-		if ($this->description) {
-			$data['description'] = $this->description;
-		}
-		if ($this->caption) {
-			$data['caption'] = $this->caption;
-		}
-		if ($this->parseMode) {
-			$data['parse_mode'] = $this->parseMode;
-		}
-		return $data;
-	}
+    protected $parseMode;
 
-	/**
-	 * Get a valid file identifier for the file
-	 *
-	 * @return  string
-	 */ 
-	public function getFileId(): string {
-		return $this->fileId;
-	}
+    public function __construct(string $id, string $title, string $fileId)
+    {
+        parent::__construct('video', $id, $title);
+        $this->fileId = $fileId;
+    }
 
-	/**
-	 * Set a valid file identifier for the file
-	 *
-	 * @param  string  $fileId  A valid file identifier for the file
-	 * @return  void
-	 */ 
-	public function setFileId(string $fileId) {
-		$this->fileId = $fileId;
-	}
+    public static function fromJson($data)
+    {
+        $object = new self($data->id, $data->title, $data->video_file_id);
+        if (isset($data->description)) {
+            $object->description = $data->description;
+        }
+        if (isset($data->caption)) {
+            $object->caption = $data->caption;
+        }
+        if (isset($data->parse_mode)) {
+            $object->parseMode = $data->parse_mode;
+        }
+        if (isset($data->reply_markup)) {
+            $object->replyMarkup = InlineKeyboardMarkup::fromJson($data->reply_markup);
+        }
+        if (isset($data->input_message_content)) {
+            $object->inputMessageContent = InputMessageContent::fromJson($data->input_message_content);
+        }
 
-	/**
-	 * Get short description of the result
-	 *
-	 * @return  string|null
-	 */ 
-	public function getDescription() {
-		return $this->description;
-	}
+        return $object;
+    }
 
-	/**
-	 * Set short description of the result
-	 *
-	 * @param  string|null  $description  Short description of the result
-	 * @return  void
-	 */ 
-	public function setDescription($description) {
-		$this->description = $description;
-	}
+    public function toJson()
+    {
+        $data = parent::toJson();
+        $data['video_file_id'] = $this->fileId;
+        if ($this->description) {
+            $data['description'] = $this->description;
+        }
+        if ($this->caption) {
+            $data['caption'] = $this->caption;
+        }
+        if ($this->parseMode) {
+            $data['parse_mode'] = $this->parseMode;
+        }
 
-	/**
-	 * Get caption of the photo to be sent, 0-200 characters
-	 *
-	 * @return  string|null
-	 */ 
-	public function getCaption() {
-		return $this->caption;
-	}
+        return $data;
+    }
 
-	/**
-	 * Set caption of the photo to be sent, 0-200 characters
-	 *
-	 * @param  string|null  $caption  Caption of the photo to be sent, 0-200 characters
-	 * @return  void
-	 */ 
-	public function setCaption($caption) {
-		$this->caption = $caption;
-	}
+    /**
+     * Get a valid file identifier for the file.
+     */
+    public function getFileId(): string
+    {
+        return $this->fileId;
+    }
 
-	/**
-	 * Get fixed-width text or inline URLs in the media caption.
-	 *
-	 * @return  string|null
-	 */ 
-	public function getParseMode() {
-		return $this->parseMode;
-	}
+    /**
+     * Set a valid file identifier for the file.
+     *
+     * @param string $fileId A valid file identifier for the file
+     *
+     * @return void
+     */
+    public function setFileId(string $fileId)
+    {
+        $this->fileId = $fileId;
+    }
 
-	/**
-	 * Set fixed-width text or inline URLs in the media caption.
-	 *
-	 * @param  string|null  $parseMode  fixed-width text or inline URLs in the media caption.
-	 * @return  void
-	 */ 
-	public function setParseMode($parseMode) {
-		$this->parseMode = $parseMode;
-	}
+    /**
+     * Get short description of the result.
+     *
+     * @return string|null
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set short description of the result.
+     *
+     * @param string|null $description Short description of the result
+     *
+     * @return void
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * Get caption of the photo to be sent, 0-200 characters.
+     *
+     * @return string|null
+     */
+    public function getCaption()
+    {
+        return $this->caption;
+    }
+
+    /**
+     * Set caption of the photo to be sent, 0-200 characters.
+     *
+     * @param string|null $caption Caption of the photo to be sent, 0-200 characters
+     *
+     * @return void
+     */
+    public function setCaption($caption)
+    {
+        $this->caption = $caption;
+    }
+
+    /**
+     * Get fixed-width text or inline URLs in the media caption.
+     *
+     * @return string|null
+     */
+    public function getParseMode()
+    {
+        return $this->parseMode;
+    }
+
+    /**
+     * Set fixed-width text or inline URLs in the media caption.
+     *
+     * @param string|null $parseMode fixed-width text or inline URLs in the media caption
+     *
+     * @return void
+     */
+    public function setParseMode($parseMode)
+    {
+        $this->parseMode = $parseMode;
+    }
 }

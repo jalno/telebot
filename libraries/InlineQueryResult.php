@@ -1,159 +1,170 @@
 <?php
-namespace packages\telebot;
-abstract class InlineQueryResult extends Type {
-	/**
-     * Type of the result, must be one of: article, photo, gif, mpeg4_gif, video
-     *
-     * @var string
-     */
-	protected $type;
 
-	/**
-     * Unique identifier for this result, 1-64 bytes
+namespace packages\telebot;
+
+abstract class InlineQueryResult extends Type
+{
+    /**
+     * Type of the result, must be one of: article, photo, gif, mpeg4_gif, video.
      *
      * @var string
      */
-	protected $id;
-	
+    protected $type;
+
     /**
-     * Title for the result
+     * Unique identifier for this result, 1-64 bytes.
      *
      * @var string
      */
-	protected $title;
-	
+    protected $id;
+
     /**
-     * Content of the message to be sent instead of the file
+     * Title for the result.
+     *
+     * @var string
+     */
+    protected $title;
+
+    /**
+     * Content of the message to be sent instead of the file.
      *
      * @var InputMessageContent|null
      */
-	protected $inputMessageContent;
-	
+    protected $inputMessageContent;
+
     /**
-     * Inline keyboard attached to the message
+     * Inline keyboard attached to the message.
      *
      * @var InlineKeyboardMarkup|null
      */
-	protected $replyMarkup;
-	
+    protected $replyMarkup;
+
     /**
      * InlineQueryResult constructor.
-     *
-     * @param string $type
-     * @param string $id
-     * @param string $title
-	 */
-	public function __construct(string $type, string $id, string $title){
+     */
+    public function __construct(string $type, string $id, string $title)
+    {
         $this->type = $type;
         $this->id = $id;
         $this->title = $title;
-	}
-	public function toJson() {
-		$json = array(
-			'type' => $this->type,
-			'id' => $this->id,
-			'title' => $this->title,
-		);
-		if ($this->inputMessageContent) {
-			$json['input_message_content'] = $this->inputMessageContent->toJson();
-		}
-		if ($this->replyMarkup) {
-			$json['reply_markup'] = $this->replyMarkup->toJson();
-		}
-	}
+    }
 
-	/**
-	 * Get type of the result, must be one of: article, photo, gif, mpeg4_gif, video
-	 *
-	 * @return  string
-	 */ 
-	public function getType(): string {
-		return $this->type;
-	}
+    public function toJson()
+    {
+        $json = [
+            'type' => $this->type,
+            'id' => $this->id,
+            'title' => $this->title,
+        ];
+        if ($this->inputMessageContent) {
+            $json['input_message_content'] = $this->inputMessageContent->toJson();
+        }
+        if ($this->replyMarkup) {
+            $json['reply_markup'] = $this->replyMarkup->toJson();
+        }
+    }
 
-	/**
-	 * Set type of the result, must be one of: article, photo, gif, mpeg4_gif, video
-	 *
-	 * @param  string  $type  Type of the result
-	 * @return  void
-	 */ 
-	public function setType(string $type) {
-		$this->type = $type;
-	}
+    /**
+     * Get type of the result, must be one of: article, photo, gif, mpeg4_gif, video.
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
 
-	/**
-	 * Get unique identifier for this result, 1-64 bytes
-	 *
-	 * @return  string
-	 */ 
-	public function getId(): string {
-		return $this->id;
-	}
+    /**
+     * Set type of the result, must be one of: article, photo, gif, mpeg4_gif, video.
+     *
+     * @param string $type Type of the result
+     *
+     * @return void
+     */
+    public function setType(string $type)
+    {
+        $this->type = $type;
+    }
 
-	/**
-	 * Set unique identifier for this result, 1-64 bytes
-	 *
-	 * @param  string  $id  Unique identifier for this result, 1-64 bytes
-	 * @return  void
-	 */ 
-	public function setId(string $id) {
-		$this->id = $id;
-	}
+    /**
+     * Get unique identifier for this result, 1-64 bytes.
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
 
-	/**
-	 * Get title for the result
-	 *
-	 * @return  string
-	 */ 
-	public function getTitle(): string {
-		return $this->title;
-	}
+    /**
+     * Set unique identifier for this result, 1-64 bytes.
+     *
+     * @param string $id Unique identifier for this result, 1-64 bytes
+     *
+     * @return void
+     */
+    public function setId(string $id)
+    {
+        $this->id = $id;
+    }
 
-	/**
-	 * Set title for the result
-	 *
-	 * @param  string  $title  Title for the result
-	 * @return  void
-	 */ 
-	public function setTitle(string $title) {
-		$this->title = $title;
-	}
+    /**
+     * Get title for the result.
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
 
-	/**
-	 * Get content of the message to be sent instead of the file
-	 *
-	 * @return  InputMessageContent|null
-	 */ 
-	public function getInputMessageContent() {
-		return $this->inputMessageContent;
-	}
+    /**
+     * Set title for the result.
+     *
+     * @param string $title Title for the result
+     *
+     * @return void
+     */
+    public function setTitle(string $title)
+    {
+        $this->title = $title;
+    }
 
-	/**
-	 * Set content of the message to be sent instead of the file
-	 *
-	 * @param  InputMessageContent|null  $inputMessageContent  Content of the message to be sent instead of the file
-	 * @return  void
-	 */ 
-	public function setInputMessageContent($inputMessageContent) {
-		$this->inputMessageContent = $inputMessageContent;
-	}
+    /**
+     * Get content of the message to be sent instead of the file.
+     *
+     * @return InputMessageContent|null
+     */
+    public function getInputMessageContent()
+    {
+        return $this->inputMessageContent;
+    }
 
-	/**
-	 * Get inline keyboard attached to the message
-	 *
-	 * @return  InlineKeyboardMarkup|null
-	 */ 
-	public function getReplyMarkup() {
-		return $this->replyMarkup;
-	}
+    /**
+     * Set content of the message to be sent instead of the file.
+     *
+     * @param InputMessageContent|null $inputMessageContent Content of the message to be sent instead of the file
+     *
+     * @return void
+     */
+    public function setInputMessageContent($inputMessageContent)
+    {
+        $this->inputMessageContent = $inputMessageContent;
+    }
 
-	/**
-	 * Set inline keyboard attached to the message
-	 *
-	 * @param  InlineKeyboardMarkup|null  $replyMarkup  Inline keyboard attached to the message
-	 * @return  void
-	 */ 
-	public function setReplyMarkup($replyMarkup) {
-		$this->replyMarkup = $replyMarkup;
-	}
+    /**
+     * Get inline keyboard attached to the message.
+     *
+     * @return InlineKeyboardMarkup|null
+     */
+    public function getReplyMarkup()
+    {
+        return $this->replyMarkup;
+    }
+
+    /**
+     * Set inline keyboard attached to the message.
+     *
+     * @param InlineKeyboardMarkup|null $replyMarkup Inline keyboard attached to the message
+     *
+     * @return void
+     */
+    public function setReplyMarkup($replyMarkup)
+    {
+        $this->replyMarkup = $replyMarkup;
+    }
 }

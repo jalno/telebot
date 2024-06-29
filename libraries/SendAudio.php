@@ -1,205 +1,235 @@
 <?php
+
 namespace packages\telebot;
-use \packages\base\IO\File;
-class SendAudio extends Method {
-	/**
+
+use packages\base\IO\File;
+
+class SendAudio extends Method
+{
+    /**
      * @var int|string
      */
-	protected $chatId;
+    protected $chatId;
 
-	/**
-	 * @var File
+    /**
+     * @var File
      */
-	protected $audio;
+    protected $audio;
 
-	/**
-	 * @var int|null
+    /**
+     * @var int|null
      */
-	protected $duration;
+    protected $duration;
 
-	/**
-	 * @var string|null
+    /**
+     * @var string|null
      */
-	protected $performer;
+    protected $performer;
 
-	/**
-	 * @var string|null
+    /**
+     * @var string|null
      */
-	protected $title;
-	
-	/**
-	 * @var int|null
-     */
-	protected $replyToMessageId;
+    protected $title;
 
-	/**
-	 * @var ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
+    /**
+     * @var int|null
      */
-	protected $replyMarkup;
+    protected $replyToMessageId;
 
-	/**
-	 * @var bool
+    /**
+     * @var ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
      */
-	protected $disableNotification = false;
+    protected $replyMarkup;
 
-	/**
-	 * @var string|null
+    /**
+     * @var bool
      */
-	protected $parseMode;
+    protected $disableNotification = false;
 
-	public function __construct($chatId, File $audio) {
-		$this->chatId = $chatId;
-		$this->audio = $audio;
-	}
-	/**
+    /**
+     * @var string|null
+     */
+    protected $parseMode;
+
+    public function __construct($chatId, File $audio)
+    {
+        $this->chatId = $chatId;
+        $this->audio = $audio;
+    }
+
+    /**
      * @param string|null $parseMode
+     *
      * @return void
      */
-	public function setParseMode($parseMode) {
-		$this->parseMode = $parseMode;
-	}
-	/**
+    public function setParseMode($parseMode)
+    {
+        $this->parseMode = $parseMode;
+    }
+
+    /**
      * @return string|null
      */
-	public function getParseMode() {
-		return $this->parseMode;
-	}
-	/**
+    public function getParseMode()
+    {
+        return $this->parseMode;
+    }
+
+    /**
      * @param int|string $chatId
+     *
      * @return void
      */
-	public function setChatID($chatId) {
-		$this->chatId = $chatId;
-	}
-	/**
+    public function setChatID($chatId)
+    {
+        $this->chatId = $chatId;
+    }
+
+    /**
      * @return int
      */
-	public function getChatID() {
-		return $this->chatId;
-	}
-	
-	/**
-	 * Get the value of audio
-	 *
-	 * @return  File
-	 */ 
-	public function getAudio(): File {
-		return $this->audio;
-	}
+    public function getChatID()
+    {
+        return $this->chatId;
+    }
 
-	/**
-	 * Set the value of audio
-	 *
-	 * @param  File  $audio
-	 * @return  void
-	 */ 
-	public function setAudio(File $audio) {
-		$this->audio = $audio;
-	}
+    /**
+     * Get the value of audio.
+     */
+    public function getAudio(): File
+    {
+        return $this->audio;
+    }
 
-	/**
-	 * Get the value of duration
-	 *
-	 * @return  int|null
-	 */ 
-	public function getDuration() {
-		return $this->duration;
-	}
-
-	/**
-	 * Set the value of duration
-	 *
-	 * @param  int|null  $duration
-	 * @return  void
-	 */ 
-	public function setDuration($duration) {
-		$this->duration = $duration;
-	}
-
-	/**
-	 * Get the value of performer
-	 *
-	 * @return  string|null
-	 */ 
-	public function getPerformer() {
-		return $this->performer;
-	}
-
-	/**
-	 * Set the value of performer
-	 *
-	 * @param  string|null  $performer
-	 * @return  void
-	 */ 
-	public function setPerformer($performer) {
-		$this->performer = $performer;
-	}
-
-	/**
-	 * Get the value of title
-	 *
-	 * @return  string|null
-	 */ 
-	public function getTitle() {
-		return $this->title;
-	}
-
-	/**
-	 * Set the value of title
-	 *
-	 * @param  string|null  $title
-	 * @return  void
-	 */ 
-	public function setTitle($title) {
-		$this->title = $title;
-	}
-
-	
-
-	/**
-	 * @param int|null $replyToMessageId
+    /**
+     * Set the value of audio.
+     *
      * @return void
      */
-	public function setReplyToMessageId($replyToMessageId) {
-		$this->replyToMessageId = $replyToMessageId;
-	}
-	/**
+    public function setAudio(File $audio)
+    {
+        $this->audio = $audio;
+    }
+
+    /**
+     * Get the value of duration.
+     *
      * @return int|null
      */
-	public function getReplyToMessageId() {
-		return $this->replyToMessageId;
-	}
-	/**
-	 * @param ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null $replyMarkup
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Set the value of duration.
+     *
+     * @param int|null $duration
+     *
      * @return void
      */
-	public function setReplyMarkup($replyMarkup) {
-		$this->replyMarkup = $replyMarkup;
-	}
-	/**
+    public function setDuration($duration)
+    {
+        $this->duration = $duration;
+    }
+
+    /**
+     * Get the value of performer.
+     *
+     * @return string|null
+     */
+    public function getPerformer()
+    {
+        return $this->performer;
+    }
+
+    /**
+     * Set the value of performer.
+     *
+     * @param string|null $performer
+     *
+     * @return void
+     */
+    public function setPerformer($performer)
+    {
+        $this->performer = $performer;
+    }
+
+    /**
+     * Get the value of title.
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set the value of title.
+     *
+     * @param string|null $title
+     *
+     * @return void
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @param int|null $replyToMessageId
+     *
+     * @return void
+     */
+    public function setReplyToMessageId($replyToMessageId)
+    {
+        $this->replyToMessageId = $replyToMessageId;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getReplyToMessageId()
+    {
+        return $this->replyToMessageId;
+    }
+
+    /**
+     * @param ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null $replyMarkup
+     *
+     * @return void
+     */
+    public function setReplyMarkup($replyMarkup)
+    {
+        $this->replyMarkup = $replyMarkup;
+    }
+
+    /**
      * @return ReplyKeyboardMarkup|ReplyKeyboardHide|ForceReply|ReplyKeyboardRemove|null
      */
-	public function getReplyMarkup() {
-		return $this->replyMarkup;
-	}
+    public function getReplyMarkup()
+    {
+        return $this->replyMarkup;
+    }
 
-	/**
-	 * @param bool $disableNotification
+    /**
      * @return void
      */
-	public function setDisableNotification(bool $disableNotification) {
-		$this->disableNotification = $disableNotification;
-	}
-	/**
-     * @return bool
-     */
-	public function getDisableNotification():bool {
-		return $this->disableNotification;
-	}
-	
-	public function toJson(): array {
-		return array(
-			'chat_id' => $this->chatId,
+    public function setDisableNotification(bool $disableNotification)
+    {
+        $this->disableNotification = $disableNotification;
+    }
+
+    public function getDisableNotification(): bool
+    {
+        return $this->disableNotification;
+    }
+
+    public function toJson(): array
+    {
+        return [
+            'chat_id' => $this->chatId,
             'audio' => $this->audio,
             'duration' => $this->duration,
             'performer' => $this->performer,
@@ -208,9 +238,11 @@ class SendAudio extends Method {
             'reply_to_message_id' => $this->replyToMessageId,
             'reply_markup' => is_null($this->replyMarkup) ? $this->replyMarkup : $this->replyMarkup->toJson(),
             'disable_notification' => $this->disableNotification,
-		);
-	}
-	public function handleResponse($response) {
-		return Message::fromJson($response);
-	}
+        ];
+    }
+
+    public function handleResponse($response)
+    {
+        return Message::fromJson($response);
+    }
 }

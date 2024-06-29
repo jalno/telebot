@@ -1,4 +1,7 @@
 <?php
+
 namespace packages\telebot;
-abstract class InputMessageContent extends Type {
+
+abstract class InputMessageContent extends Type
+{
 }
