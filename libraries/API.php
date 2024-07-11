@@ -26,7 +26,7 @@ class API
      *
      * @throws HTTP\ClientException
      * @throws HTTP\ServerException
-     * @throws \packages\telebot\Exception
+     * @throws Exception
      * @throws InvalidJsonException
      */
     public function call(Method $method)
